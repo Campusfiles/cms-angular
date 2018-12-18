@@ -10,6 +10,7 @@ export class PostsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    window.dispatchEvent(new Event('resize'));
   }
 
 }

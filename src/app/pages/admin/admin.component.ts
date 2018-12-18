@@ -10,9 +10,6 @@ export class AdminComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    // $(document).ready(function () {
-    //   $('.sidebar-menu').tree();
-    // });
   }
 
 }
