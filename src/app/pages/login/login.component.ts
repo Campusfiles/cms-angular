@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { error as showErrorToast } from 'toastr';
 
 @Component({
   selector: 'app-login',
@@ -12,13 +14,27 @@ export class LoginComponent implements OnInit {
   email: any = '';
   password: any = '';
 
-  constructor() { }
+  constructor(
+    public router: Router
+  ) { }
 
   ngOnInit() {
   }
 
+  validate() {
+    if (!this.email) {
+      showErrorToast('Please enter email');
+    } else if (!this.password) {
+      showErrorToast('Please enter password');
+    } else {
+      return true;
+    }
+  }
+
   loginUser() {
-    console.log(this);
+    if (this.validate()) {
+      this.router.navigate(['admin']);
+    }
   }
 
   toggle(page) {
