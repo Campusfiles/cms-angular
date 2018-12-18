@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+  login = true;
+  signup = false;
+  forgotPassword = false;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  toggle(page) {
+    ['login', 'signup', 'forgotPassword'].map(q => this[q] = false);
+    this[page] = true;
   }
 
 }

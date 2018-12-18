@@ -5,15 +5,13 @@ body {
         display: block;
         width: 100px;
         height: 100px;
-        margin-bottom: 25px;
+        margin-bottom: 10px;
     }
 
-    .login-box-body {
-        .social-auth-links {
-            .fa-facebook,
-            .fa-google {
-                font-size: 18px;
-            }
+    .social-auth-links {
+        .fa-facebook,
+        .fa-google {
+            font-size: 18px;
         }
     }
 }
