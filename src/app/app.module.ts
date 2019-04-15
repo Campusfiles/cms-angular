@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './modules/routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,9 @@ import { DashboardComponent } from './pages/admin/dashboard/dashboard.component'
 import { FooterComponent } from './components/footer/footer.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 
+// material
+import {MatTableModule} from '@angular/material/table';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,12 +29,17 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     PostsComponent,
     FooterComponent,
     SidenavComponent,
-    DashboardComponent
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+
+    // material
+    MatTableModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
