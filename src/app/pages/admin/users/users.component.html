@@ -1,11 +1,12 @@
 <div class="content-wrapper">
     <section class="content-header">
       <h1>  
-        USERS 
+        <span>USERS</span> 
+        <span class="add-new-user" (click)="openUserForm()"> +Add New User</span>
       </h1>
     </section>
   
-    <section class="content">
+    <section class="content" *ngIf="list">
       <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
         <ng-container matColumnDef="id">
           <th mat-header-cell *matHeaderCellDef> Id </th>
@@ -31,4 +32,8 @@
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
       </table>
     </section>
+
+    <section class="content" *ngIf="!list">
+    </section>
+    
   </div>
