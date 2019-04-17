@@ -18,30 +18,12 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 
 // material
-import {MatTableModule} from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LoginComponent,
-    AdminComponent,
-    UsersComponent,
-    PostsComponent,
-    FooterComponent,
-    SidenavComponent,
-    DashboardComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule,
-
-    // material
-    MatTableModule
-
-  ],
+  declarations: [AppComponent, LoginComponent, AdminComponent, UsersComponent, PostsComponent, FooterComponent, SidenavComponent, DashboardComponent],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, MatTableModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
