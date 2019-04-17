@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 // MODULE
 import { MatTableModule } from '@angular/material/table';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // ROUTING
 import { HttpClientModule } from '@angular/common/http';
@@ -21,7 +21,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, AdminComponent, UsersComponent, PostsComponent, FooterComponent, SidenavComponent, DashboardComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, MatTableModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, MatTableModule, ReactiveFormsModule ],
   providers: [],
   bootstrap: [AppComponent],
 })
