@@ -14,6 +14,10 @@ export class ApiService {
   constructor(private http: HttpClient) {
   }
 
+  fetch(endPoint: string) {
+    return this.http.get(`https://jsonplaceholder.typicode.com/${endPoint}`);
+  }
+
   get(uri: string, token: string = '') {
     const headers = {
       headers: {
