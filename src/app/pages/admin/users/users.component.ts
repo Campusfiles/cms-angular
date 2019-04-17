@@ -6,10 +6,12 @@ import { ApiService } from 'app/services/api.service';
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.scss']
 })
+
 export class UsersComponent implements OnInit {
 
   displayedColumns: string[] = ['id', 'name', 'username', 'email'];
   dataSource = [];
+  list = true;
 
   constructor(public api: ApiService) { }
 
@@ -19,6 +21,11 @@ export class UsersComponent implements OnInit {
       this.dataSource = users;
     });
     window.dispatchEvent(new Event('resize'));
+  }
+
+  openUserForm() {
+    this.list = !this.list;
+      console.log('test');
   }
 
 }
