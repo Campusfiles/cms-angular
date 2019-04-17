@@ -1,24 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
+// MODULE
+import { MatTableModule } from '@angular/material/table';
 import { FormsModule } from '@angular/forms';
+
+// ROUTING
 import { HttpClientModule } from '@angular/common/http';
-
 import { AppRoutingModule } from './modules/routing.module';
-import { AppComponent } from './app.component';
 
-// pages
+// COMPONENTS
+import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
 import { AdminComponent } from './pages/admin/admin.component';
 import { UsersComponent } from './pages/admin/users/users.component';
 import { PostsComponent } from './pages/admin/posts/posts.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
-
-// components
 import { FooterComponent } from './components/footer/footer.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
-
-// material
-import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, AdminComponent, UsersComponent, PostsComponent, FooterComponent, SidenavComponent, DashboardComponent],
